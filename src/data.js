@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaEnvelope, FaCss3Alt, FaReact, FaNodeJs, FaHtml5
 import { SiTailwindcss, SiFlutter, SiDart, SiFirebase, SiJavascript, SiGit, SiPostman } from 'react-icons/si';
 
 import imgHiddenTres from './assets/Hidden tres.png';
-import imgGradProject from './assets/Graduation project.png';
+import imgGradProject from './assets/Horas.png';
 import imgMovieApp from './assets/escanorhub.png';
 import imgEducationApp from './assets/learning.png';
 import imgShopWeb from './assets/shopweb.png';
@@ -43,7 +43,9 @@ export const skills = {
         { name: "OOP", icon: FaNodeJs, color: "text-green-500" },
         { name: "Clean Arch", icon: FaReact, color: "text-purple-400" },
         { name: "Design Patterns", icon: SiJavascript, color: "text-yellow-400" },
-        { name: "UI/UX", icon: FaHtml5, color: "text-pink-400" }
+        { name: "UI/UX", icon: FaHtml5, color: "text-pink-400" },
+        { name: "MVC", icon: FaReact, color: "text-blue-400" },
+        { name: "MVVM", icon: SiFlutter, color: "text-cyan-400" }
     ],
     "Tools & Backend": [
         { name: "Firebase", icon: SiFirebase, color: "text-amber-500" },
@@ -53,6 +55,33 @@ export const skills = {
         { name: "Postman", icon: SiPostman, color: "text-orange-500" }
     ]
 };
+
+export const aiTools = [
+    {
+        name: "Antigravity",
+        description: "AI-powered coding assistant for agentic software development and pair programming",
+        gradient: "from-violet-600 to-purple-500",
+        glow: "shadow-violet-500/30",
+        border: "border-violet-500/30",
+        tag: "Agentic Coding"
+    },
+    {
+        name: "Cursor",
+        description: "AI-first code editor built for pair-programming with state-of-the-art LLMs",
+        gradient: "from-blue-600 to-cyan-500",
+        glow: "shadow-blue-500/30",
+        border: "border-blue-500/30",
+        tag: "AI Editor"
+    },
+    {
+        name: "Claude",
+        description: "Anthropic's advanced AI assistant for complex reasoning, code review, and writing",
+        gradient: "from-orange-500 to-amber-400",
+        glow: "shadow-orange-500/30",
+        border: "border-orange-500/30",
+        tag: "AI Assistant"
+    }
+];
 
 export const projects = [
     {
