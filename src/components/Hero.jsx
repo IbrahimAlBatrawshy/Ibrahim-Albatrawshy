@@ -97,18 +97,41 @@ const Hero = () => {
                         </motion.div>
                     </div>
 
-                    {/* Image Section (Floating/Standing like reference) */}
+                    {/* Image Section - Professional Style */}
                     <motion.div
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.7, delay: 0.2 }}
-                        className="w-full md:w-1/2 h-1/2 md:h-full flex justify-center md:justify-end items-end relative z-10 pt-10 md:pt-20"
+                        className="w-full md:w-1/2 flex justify-center md:justify-end items-center relative z-10 pt-10 md:pt-0"
                     >
-                        <img
-                            src={profileImg}
-                            alt={personalInfo.name}
-                            className="object-contain h-full w-auto max-h-[50vh] md:max-h-[85vh] drop-shadow-[0_20px_50px_rgba(59,130,246,0.3)]"
-                        />
+                        {/* Outer glow container */}
+                        <div style={{ animation: 'floatProfile 4s ease-in-out infinite' }} className="relative">
+                            {/* Gradient ring border */}
+                            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary via-secondary to-primary p-[3px] blur-sm opacity-80" />
+                            <div className="relative p-[3px] rounded-full bg-gradient-to-br from-primary via-purple-400 to-secondary">
+                                {/* Inner photo circle */}
+                                <div className="rounded-full overflow-hidden w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 relative"
+                                    style={{ boxShadow: '0 0 60px rgba(82, 39, 255, 0.5), 0 0 120px rgba(139, 92, 246, 0.2)' }}>
+                                    <img
+                                        src={profileImg}
+                                        alt={personalInfo.name}
+                                        className="w-full h-full object-cover object-top scale-110"
+                                    />
+                                    {/* Subtle overlay for depth */}
+                                    <div className="absolute inset-0 rounded-full bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+                                </div>
+                            </div>
+                            {/* Decorative dots */}
+                            <div className="absolute -top-3 -right-3 w-5 h-5 rounded-full bg-primary opacity-80" />
+                            <div className="absolute -bottom-2 -left-4 w-3 h-3 rounded-full bg-secondary opacity-70" />
+                            <div className="absolute top-1/2 -right-6 w-2 h-2 rounded-full bg-purple-300 opacity-60" />
+                        </div>
+                        <style>{`
+                            @keyframes floatProfile {
+                                0%, 100% { transform: translateY(0px); }
+                                50% { transform: translateY(-12px); }
+                            }
+                        `}</style>
                     </motion.div>
 
                 </div>
