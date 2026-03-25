@@ -15,18 +15,17 @@ function App() {
       <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -10, pointerEvents: 'none' }}>
         <LiquidEther
           colors={['#5227FF', '#FF9FFC', '#B19EEF']}
-          mouseForce={30}
-          cursorSize={120}
-          isViscous
-          viscous={30}
-          iterationsViscous={32}
-          iterationsPoisson={32}
-          dt={0.025}
-          resolution={0.5}
+          mouseForce={20}
+          cursorSize={80}
+          isViscous={false}
+          iterationsViscous={8}
+          iterationsPoisson={12}
+          dt={0.014}
+          resolution={0.25}
           isBounce={false}
           autoDemo
-          autoSpeed={1.5}
-          autoIntensity={4.0}
+          autoSpeed={1.2}
+          autoIntensity={3.0}
           takeoverDuration={0.25}
           autoResumeDelay={1500}
           autoRampDuration={0.4}
