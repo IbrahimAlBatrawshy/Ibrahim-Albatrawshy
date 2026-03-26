@@ -8,6 +8,7 @@ import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import LiquidEther from './components/LiquidEther';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <Analytics />
     </div>
   );
 }
