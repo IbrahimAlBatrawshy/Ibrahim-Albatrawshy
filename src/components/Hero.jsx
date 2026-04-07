@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import { personalInfo } from '../data';
-import profileImg from '../assets/Adobe Express - file (13).png';
+import profileImg from '../assets/Untitled (1).png';
 
 const Hero = () => {
     return (
@@ -104,34 +104,32 @@ const Hero = () => {
                         transition={{ duration: 0.7, delay: 0.2 }}
                         className="w-full md:w-1/2 flex justify-center md:justify-end items-center relative z-10 pt-10 md:pt-0"
                     >
-                        {/* Outer glow container */}
-                        <div style={{ animation: 'floatProfile 4s ease-in-out infinite' }} className="relative">
-                            {/* Gradient ring border */}
-                            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary via-secondary to-primary p-[3px] blur-sm opacity-80" />
-                            <div className="relative p-[3px] rounded-full bg-gradient-to-br from-primary via-purple-400 to-secondary">
-                                {/* Inner photo circle */}
-                                <div className="rounded-full overflow-hidden w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 relative"
-                                    style={{ boxShadow: '0 0 60px rgba(82, 39, 255, 0.5), 0 0 120px rgba(139, 92, 246, 0.2)' }}>
-                                    <img
-                                        src={profileImg}
-                                        alt={personalInfo.name}
-                                        className="w-full h-full object-cover object-top scale-110"
-                                    />
-                                    {/* Subtle overlay for depth */}
-                                    <div className="absolute inset-0 rounded-full bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-                                </div>
+                        {/* Blob glow rings */}
+                        <div className="absolute w-80 h-80 md:w-96 md:h-96 rounded-full bg-primary/30 blur-3xl -z-10" />
+                        <div className="absolute w-64 h-64 md:w-80 md:h-80 rounded-full bg-secondary/20 blur-2xl -z-10" />
+
+                        {/* Photo container */}
+                        <div className="relative">
+                            {/* Static gradient border ring */}
+                            <div className="absolute -inset-1 rounded-full opacity-75 blur-sm"
+                                style={{ background: 'conic-gradient(from 0deg, #5227FF, #FF9FFC, #B19EEF, #5227FF)' }}
+                            />
+                            {/* Circle photo */}
+                            <div className="relative rounded-full overflow-hidden w-64 h-64 md:w-80 md:h-80 lg:w-[22rem] lg:h-[22rem]"
+                                style={{ boxShadow: '0 0 80px rgba(82,39,255,0.6)' }}>
+                                <img
+                                    src={profileImg}
+                                    alt={personalInfo.name}
+                                    className="w-full h-full object-cover"
+                                    style={{ objectPosition: '50% 32%', transform: 'scale(1.1)' }}
+                                />
+                                <div className="absolute inset-0 rounded-full bg-gradient-to-t from-black/20 via-transparent to-transparent" />
                             </div>
                             {/* Decorative dots */}
-                            <div className="absolute -top-3 -right-3 w-5 h-5 rounded-full bg-primary opacity-80" />
-                            <div className="absolute -bottom-2 -left-4 w-3 h-3 rounded-full bg-secondary opacity-70" />
-                            <div className="absolute top-1/2 -right-6 w-2 h-2 rounded-full bg-purple-300 opacity-60" />
+                            <div className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-primary shadow-lg shadow-primary/50" />
+                            <div className="absolute -bottom-3 -left-3 w-3 h-3 rounded-full bg-secondary shadow-lg shadow-secondary/50" />
+                            <div className="absolute top-1/3 -right-5 w-2 h-2 rounded-full bg-purple-300" />
                         </div>
-                        <style>{`
-                            @keyframes floatProfile {
-                                0%, 100% { transform: translateY(0px); }
-                                50% { transform: translateY(-12px); }
-                            }
-                        `}</style>
                     </motion.div>
 
                 </div>
