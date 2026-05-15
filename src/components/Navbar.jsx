@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 import { motion, AnimatePresence } from 'framer-motion';
 import { personalInfo } from '../data';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
-import cvFile from '../assets/Ibrahim_Albatrawshy_FlowCV_Resume_2026-05-15.pdf';
+const cvFile = "https://drive.google.com/file/d/1bi4CvnFfKniCsT7J8Au0f5F0VWgRNqeI/view?usp=drive_link";
 import logoImg from '../assets/logo.png';
 
 const navLinks = [
