@@ -6,10 +6,9 @@ import imgHiddenTres from './assets/Hidden tres.png';
 import imgGradProject from './assets/Horas.png';
 import imgMovieApp from './assets/escanorhub.png';
 import imgEducationApp from './assets/learning.png';
-import imgShopWeb from './assets/shopweb.png';
-import vidShopWeb from './assets/HEREW.mp4';
-import imgAssl from './assets/assl.png';
+import imgAsl from './assets/asl.png';
 import imgIsupply from './assets/pro1.png';
+import imgDarAlNukhbah from './assets/1.png';
 
 export const personalInfo = {
     name: "Ibrahim Al-Batrawshy",
@@ -87,6 +86,16 @@ export const aiTools = [
 
 export const projects = [
     {
+        id: 7,
+        title: "Dar Al-Nukhbah Perfumes",
+        description: "An elegant e-commerce web platform showcasing luxury Arabic and French perfumes, premium Oud, and musk. Built with a rich gold-themed responsive UI, interactive shopping catalog, and smooth animations.",
+        tags: ["Next.js", "React 19", "TypeScript", "Tailwind CSS", "Framer Motion"],
+        category: "Front-End",
+        githubUrl: "https://github.com/IbrahimAlBatrawshy",
+        liveUrl: "https://dar-al-nukhbah.vercel.app/",
+        image: imgDarAlNukhbah
+    },
+    {
         id: 1,
         title: "ASL Brand E-Commerce",
         description: "A full-stack e-commerce web platform featuring a dynamic product catalog with multi-variant selection, order management via Google Sheets integration, and robust form validation using TypeScript & Zod.",
@@ -94,8 +103,7 @@ export const projects = [
         category: "Front-End",
         githubUrl: "https://github.com/IbrahimAlBatrawshy",
         liveUrl: "https://www.assl.store/",
-        image: imgAssl,
-        video: vidShopWeb
+        image: imgAsl
     },
     {
         id: 2,

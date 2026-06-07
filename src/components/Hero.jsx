@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import { personalInfo } from '../data';
-import profileImg from '../assets/Untitled (1).png';
+import profileImg from '../assets/new personal photo.png';
 
 const Hero = () => {
     return (
