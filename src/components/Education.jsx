@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { experience } from '../data';
+import { education } from '../data';
 
-const Experience = () => {
+const Education = () => {
     return (
-        <section id="experience" className="py-20 relative bg-surface/30">
+        <section id="education" className="py-20 relative">
             <div className="container mx-auto px-6 md:px-12">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                        <span className="text-gradient">Work Experience</span>
+                        <span className="text-gradient">Education</span>
                     </h2>
                     <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
                 </div>
@@ -18,7 +18,7 @@ const Experience = () => {
                     <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-white/10 md:-translate-x-1/2"></div>
 
                     <div className="space-y-12">
-                        {experience.map((item, index) => (
+                        {education.map((item, index) => (
                             <motion.div
                                 key={item.id}
                                 initial={{ opacity: 0, y: 20 }}
@@ -37,8 +37,8 @@ const Experience = () => {
                                         <span className="inline-block py-1 px-3 rounded-full bg-primary/20 text-primary text-xs font-bold mb-3 border border-primary/20">
                                             {item.duration}
                                         </span>
-                                        <h3 className="text-xl font-bold text-white mb-1">{item.role}</h3>
-                                        <h4 className="text-md text-gray-400 font-medium mb-4">{item.company}</h4>
+                                        <h3 className="text-xl font-bold text-white mb-1">{item.degree}</h3>
+                                        <h4 className="text-md text-gray-400 font-medium mb-4">{item.institution}</h4>
                                         <p className="text-gray-400 text-sm leading-relaxed">
                                             {item.description}
                                         </p>
@@ -53,4 +53,4 @@ const Experience = () => {
     );
 };
 
-export default Experience;
+export default Education;

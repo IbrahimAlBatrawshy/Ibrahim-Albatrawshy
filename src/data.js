@@ -57,32 +57,6 @@ export const skills = {
     ]
 };
 
-export const aiTools = [
-    {
-        name: "Antigravity",
-        description: "AI-powered coding assistant for agentic software development and pair programming",
-        gradient: "from-violet-600 to-purple-500",
-        glow: "shadow-violet-500/30",
-        border: "border-violet-500/30",
-        tag: "Agentic Coding"
-    },
-    {
-        name: "Cursor",
-        description: "AI-first code editor built for pair-programming with state-of-the-art LLMs",
-        gradient: "from-blue-600 to-cyan-500",
-        glow: "shadow-blue-500/30",
-        border: "border-blue-500/30",
-        tag: "AI Editor"
-    },
-    {
-        name: "Claude",
-        description: "Anthropic's advanced AI assistant for complex reasoning, code review, and writing",
-        gradient: "from-orange-500 to-amber-400",
-        glow: "shadow-orange-500/30",
-        border: "border-orange-500/30",
-        tag: "AI Assistant"
-    }
-];
 
 export const projects = [
     {
@@ -91,7 +65,7 @@ export const projects = [
         description: "An elegant e-commerce web platform showcasing luxury Arabic and French perfumes, premium Oud, and musk. Built with a rich gold-themed responsive UI, interactive shopping catalog, and smooth animations.",
         tags: ["Next.js", "React 19", "TypeScript", "Tailwind CSS", "Framer Motion"],
         category: "Front-End",
-        githubUrl: "https://github.com/IbrahimAlBatrawshy",
+        githubUrl: "https://github.com/IbrahimAlBatrawshy/Dar-Al-Nukhbah",
         liveUrl: "https://dar-al-nukhbah.vercel.app/",
         image: imgDarAlNukhbah
     },
@@ -178,12 +152,15 @@ export const experience = [
         company: "Columbus State University (Remote)",
         duration: "11/2023 – 01/2024",
         description: "Created interactive data structure visualizations using Java and the BRIDGES library. Strengthened understanding of data structures and collaborated with an international academic team, enhancing communication and teamwork skills."
-    },
+    }
+];
+
+export const education = [
     {
-        id: 4,
-        role: "Bachelor of Computer Science",
-        company: "Future Academy – Higher Future Institute For Specialized Technological Studies (Cairo, Egypt)",
-        duration: "10/2022 – Present",
+        id: 1,
+        degree: "Bachelor of Computer Science",
+        institution: "Future Academy – Higher Future Institute For Specialized Technological Studies (Cairo, Egypt)",
+        duration: "10/2022 – 06/2026",
         description: "Studying core software engineering principles, algorithms, data structures, and advanced mobile/web development. Completed a graduation project (Horas) involving real-world AI and web technologies."
     }
 ];

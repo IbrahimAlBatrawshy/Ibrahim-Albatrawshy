@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { skills, aiTools } from '../data';
+import { skills } from '../data';
 
 const categoryIcons = {
     "Mobile": "",
@@ -89,70 +89,7 @@ const Skills = () => {
                     ))}
                 </motion.div>
 
-                {/* ── AI Tools Section ── */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="mt-24"
-                >
-                    {/* AI Tools Header */}
-                    <div className="text-center mb-12">
-                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 mb-4">
-                            <span className="text-sm text-primary font-medium">✨ AI-Powered Workflow</span>
-                        </div>
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                            <span className="text-gradient">AI Tools I Use</span>
-                        </h2>
-                        <p className="text-gray-400 max-w-xl mx-auto text-sm md:text-base">
-                            I leverage cutting-edge AI tools to supercharge my development workflow and build faster.
-                        </p>
-                        <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mt-4" />
-                    </div>
 
-                    {/* AI Tool Cards */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                        {aiTools.map((tool, i) => (
-                            <motion.div
-                                key={tool.name}
-                                custom={i}
-                                variants={cardVariants}
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{ once: true }}
-                                whileHover={{ scale: 1.03, y: -6 }}
-                                className={`relative rounded-2xl p-6 bg-white/5 border ${tool.border}
-                                    hover:bg-white/8 transition-all duration-300 overflow-hidden group
-                                    shadow-xl ${tool.glow} cursor-default`}
-                            >
-                                {/* Gradient glow blob in background */}
-                                <div className={`absolute -top-10 -right-10 w-32 h-32 rounded-full bg-gradient-to-br ${tool.gradient}
-                                    opacity-10 group-hover:opacity-20 transition-opacity duration-500 blur-2xl`} />
-
-                                {/* Tag badge */}
-                                <div className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium mb-4
-                                    bg-gradient-to-r ${tool.gradient} text-white`}>
-                                    {tool.tag}
-                                </div>
-
-                                {/* Icon + Name */}
-                                <div className="flex items-center gap-3 mb-3">
-                                    <span className="text-3xl">{tool.icon}</span>
-                                    <h3 className="text-xl font-bold text-white">{tool.name}</h3>
-                                </div>
-
-                                {/* Description */}
-                                <p className="text-gray-400 text-sm leading-relaxed">
-                                    {tool.description}
-                                </p>
-
-                                {/* Bottom gradient line */}
-                                <div className={`absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r ${tool.gradient} opacity-40 group-hover:opacity-80 transition-opacity duration-300`} />
-                            </motion.div>
-                        ))}
-                    </div>
-                </motion.div>
 
             </div>
         </section>
