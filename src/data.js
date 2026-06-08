@@ -145,13 +145,6 @@ export const experience = [
         company: "DEPI — Digital Egypt Pioneers Initiative",
         duration: "07/2025 – 12/2025",
         description: "Architected and maintained a production-ready mobile application using Flutter & Dart, ensuring high performance on both Android & iOS. Implemented robust state management using Bloc/Cubit, integrated secure Firebase authentication, real-time data synchronization, and collaborated on intuitive UI/UX delivery."
-    },
-    {
-        id: 3,
-        role: "Data Structure Project Builder",
-        company: "Columbus State University (Remote)",
-        duration: "11/2023 – 01/2024",
-        description: "Created interactive data structure visualizations using Java and the BRIDGES library. Strengthened understanding of data structures and collaborated with an international academic team, enhancing communication and teamwork skills."
     }
 ];
 
