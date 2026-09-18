@@ -27,7 +27,7 @@ const Projects = () => {
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                        <span className="text-gradient">Featured Projects</span>
+                        <span className="text-gradient text-gradient-animated">Featured Projects</span>
                     </h2>
                     <p className="text-gray-400 max-w-xl mx-auto text-sm md:text-base mb-6">
                         A selection of my work — mobile apps, web apps, and everything in between.
@@ -65,7 +65,7 @@ const Projects = () => {
                                 transition={{ duration: 0.3, delay: i * 0.05 }}
                                 onHoverStart={() => setHoveredId(project.id)}
                                 onHoverEnd={() => setHoveredId(null)}
-                                className="group relative rounded-2xl overflow-hidden border border-white/10 bg-white/5
+                                className="group glass-card relative rounded-2xl overflow-hidden border border-white/10 bg-white/5
                                     hover:border-primary/30 hover:bg-white/8 transition-all duration-300
                                     flex flex-col shadow-xl hover:shadow-primary/10"
                             >

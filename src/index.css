@@ -5,15 +5,61 @@
 @layer base {
   body {
     @apply bg-background text-gray-200 font-sans antialiased overflow-x-hidden selection:bg-primary/30;
+    background-image:
+      radial-gradient(circle at 15% 20%, rgba(59, 130, 246, 0.15), transparent 35%),
+      radial-gradient(circle at 85% 15%, rgba(139, 92, 246, 0.13), transparent 40%);
   }
 }
 
 @layer utilities {
   .glass-card {
     @apply bg-surface/80 backdrop-blur-md border border-white/5 shadow-xl;
+    transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+  }
+
+  .glass-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(99, 102, 241, 0.32);
+    box-shadow: 0 24px 45px -25px rgba(99, 102, 241, 0.7);
   }
 
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+  }
+
+  .text-gradient-animated {
+    background-size: 200% 200%;
+    animation: gradient-shift 5s ease infinite;
+  }
+
+  .ambient-orb {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(70px);
+    animation: orb-float 8s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  .ambient-orb-secondary {
+    animation-delay: -3s;
+    animation-duration: 10s;
+  }
+}
+
+@keyframes orb-float {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  50% {
+    transform: translate3d(0, -18px, 0) scale(1.06);
   }
 }

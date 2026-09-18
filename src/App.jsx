@@ -14,7 +14,9 @@ import { SpeedInsights } from '@vercel/speed-insights/react';
 
 function App() {
   return (
-    <div className="font-sans text-gray-200 min-h-screen selection:bg-primary/30 selection:text-white pb-0 relative z-0">
+    <div className="font-sans text-gray-200 min-h-screen selection:bg-primary/30 selection:text-white pb-0 relative z-0 overflow-hidden">
+      <div className="ambient-orb w-72 h-72 md:w-96 md:h-96 bg-primary/25 -top-24 -left-20 z-[-5]" />
+      <div className="ambient-orb ambient-orb-secondary w-80 h-80 md:w-[28rem] md:h-[28rem] bg-secondary/20 -bottom-32 -right-28 z-[-5]" />
       <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -10, pointerEvents: 'none' }}>
         <LiquidEther
           colors={['#5227FF', '#FF9FFC', '#B19EEF']}

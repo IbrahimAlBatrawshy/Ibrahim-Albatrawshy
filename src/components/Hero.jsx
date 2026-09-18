@@ -40,7 +40,7 @@ const Hero = () => {
                             transition={{ duration: 0.5, delay: 0.2 }}
                             className="text-xl sm:text-2xl md:text-3xl text-gray-300 font-semibold mb-6 flex items-center justify-center md:justify-start gap-2"
                         >
-                            <span className="text-gradient">{personalInfo.role}</span>
+                            <span className="text-gradient text-gradient-animated">{personalInfo.role}</span>
                         </motion.h3>
 
                         <motion.p
@@ -62,7 +62,7 @@ const Hero = () => {
                                 to="projects"
                                 smooth={true}
                                 duration={500}
-                                className="px-8 py-3 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-medium hover:opacity-90 transition-opacity cursor-pointer w-full sm:w-auto shadow-lg shadow-primary/25 text-center"
+                                className="px-8 py-3 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-medium hover:opacity-90 hover:-translate-y-0.5 transition-all cursor-pointer w-full sm:w-auto shadow-lg shadow-primary/25 text-center"
                             >
                                 View Projects
                             </Link>
@@ -70,7 +70,7 @@ const Hero = () => {
                                 to="contact"
                                 smooth={true}
                                 duration={500}
-                                className="px-8 py-3 rounded-full border border-white/20 text-white font-medium hover:bg-white/5 transition-all cursor-pointer w-full sm:w-auto text-center"
+                                className="px-8 py-3 rounded-full border border-white/20 text-white font-medium hover:bg-white/5 hover:border-primary/40 hover:-translate-y-0.5 transition-all cursor-pointer w-full sm:w-auto text-center"
                             >
                                 Hire Me
                             </Link>
